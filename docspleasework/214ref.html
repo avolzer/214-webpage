@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" href = "214ref.css">
+    <title>CS214 Reference</title>
+  </head>
+  <body>
+    <div class="container">
+<h2 align = "center">CS 214 Reference</h2>
+<button type="button" class="collapsible Java">Java</button>
+<div class="content" style="background-color: #f4ecec">
+  <p>
+	Java source files should always be named with the name of the class they
+  contain (case-sensitive), followed by the .java suffix. By convention, Java
+  class names begin with an uppercase letter and use camel case.<br><br>
+  To compile: <code>javac -deprecation SourceFileName.java</code><br>
+ 	To run:  <code>java SourceFileName</code></p>
+  <button type="button" class="collapsible nested">Documentation</button>
+  <div class="content nested">
+    <p> Opening:<br> <pre><code>
+  	/* CircleArea.java computes the area of a circle.
+  	 *
+  	 * Input: The radius of the circle.
+  	 * Precondition: The radius is a positive number.
+  	 * Output: The area of the circle.
+  	 *
+  	 * Begun by: Dr. Adams, for CS 214, at Calvin College.
+  	 * Completed by:
+  	 * Date:
+  	 **********************************************************/</code></pre>
+  	<br>
+  	Function:<br><pre><code>
+  	/* function circleArea() computes a circle's area, given its radius.
+        * Parameter: r, a double
+        * Precondition: r is not negative.
+        * Returns: the area of the circle
+        *</code></pre>
+  	<br>
+  	SINGLE LINE:<br><pre><code>
+  	  // main program</code></pre>
+
+    </p>
+</div>
+  <button type="button" class="collapsible nested">Output</button>
+  <div class="content nested">
+    <p>
+  	There are 3 print methods: print, println, and printf. The + operator can be
+  	used to concatenate strings, as shown in the following example:<br>
+  	<pre><code>
+      System.out.println("\nThe area is " + circleArea(radius) + "\n");</code></pre><br><br>
+
+  	When a real number is printed using printf, you can control the number of decimal places
+  	being displayed as shown in this statement which prints the radius to 15 decimal places:<br>
+    <pre><code>
+      System.out.printf("The area is %.15f\n\n", circleArea(radius));</code></pre><br><br>
+
+  	Sequence for formatting strings is % [flags] [width] [.precision] conversion-character<br>
+  	Conversion characters:<br>
+  	d : decimal integer [byte, short, int, long]<br>
+  	f : floating-point number [float, double]<br>
+  	c : character Capital C will uppercase the letter<br>
+  	s : String Capital S will uppercase all the letters in the string<br>
+  	h : hashcode A hashcode is like an address. This is useful for printing a reference<br>
+  	n : newline Platform specific newline character- use %n instead of \n for greater compatibility</p>
+    </div>
+    <button type="button" class="collapsible nested">User Input</button>
+    <div class="content nested">
+      <p> Include class for scanner: <br>
+    	<pre><code>
+        import java.util.Scanner;</code></pre><br>
+        Create a connection named keyboard:<br>
+    	<pre><code>
+        Scanner keyboard = new Scanner(System.in);
+      </code></pre>
+      Read user input:
+      <pre><code>
+        int size = keyboard.nextInt();
+      </code></pre>
+      Other kinds of input:
+      <pre>
+        nextBoolean()
+        nextByte()
+        nextDouble()
+        nextFloat()
+        nextInt()
+        nextLine()
+        nextLong()
+        nextShort()
+      </pre>
+      </p>
+    </div>
+</div>
+<button type="button" class="collapsible Ada">Ada</button>
+<div class="content" style="background-color: #f2e9ef">
+  <p>Source files end in .adb suffix. The name of the source file must match the name of the program stored within it.<br>
+	to compile: <code>gnatmake file_name</code><br>
+	to run: <code>./file_name </code></p>
+  <button type="button" class="collapsible nested">Documentation</button>
+  <div class="content nested">
+    <p> Opening:<br>
+    <pre><code>
+  	-- circle_area.adb computes the area of a circle.
+  	--
+  	-- Input: The radius of the circle.
+  	-- Precondition: The radius is a positive number.
+  	-- Output: The area of the circle.
+  	--
+  	-- Begun by: Prof. Adams, CS 214 at Calvin College.
+  	-- Completed by:
+  	-- Date:
+  	----------------------------------------------------
+    </code></pre>
+
+  	Function<br><pre><code>
+   	 -- function circleArea computes a circle's area, given its radius
+   	 -- Parameter: r, a float
+   	 -- Precondition: r >= 0.0
+  	 -- Return: the area of the circle whose radius is r
+     	 ----------------------------------------------------</code></pre>
+    </p>
+    </div>
+   <button type="button" class="collapsible nested">Output</button>
+    <div class="content nested">
+      <p> 	Include packages for outputting text, floats, and ints:<br>
+    	<pre><code>
+        with Ada.Text_IO, Ada.Float_Text_IO; Ada.Integer_Text_Io;
+       	use  Ada.Text_IO, Ada.Float_Text_IO; Ada.Integer_Text_Io;
+
+       	New_Line;
+    	  Put_Line("To compute the area of a circle,");
+       	Put("enter its radius: ");</code></pre><br>
+
+       	Strings can be concatenated using the & operator.
+      </p>
+    </div>
+    <button type="button" class="collapsible nested">User Input</button>
+    <div class="content nested">
+      <p> Assign input to variable n
+        <code> get(n);</code>
+      </p>
+    </div>
+  </div>
+  <button type="button" class="collapsible Clojure">Clojure</button>
+  <div class="content" style="background-color: #e9e8f2">
+    <p>	Files should end in .clj and be saved in the clojure/src folder.<br>
+  	<br>To compile and run -main function: <code>clojure -m file_name</code></p>
+    <button type="button" class="collapsible nested">Documentation</button>
+    <div class="content nested">
+      <p> Header comments should begin with 4 semicolons<br><pre><code>
+    	;;;; circle_area.clj calculates the area of a circle.
+    	;;;;
+    	;;;; Input: The radius of a circle.
+    	;;;; Output: The area of that circle.
+    	;;;;
+    	;;;; Usage: clojure -m circle_area
+    	;;;;
+    	;;;; Begun by: Prof. Adams, for CS 214 at Calvin College.
+    	;;;; Completed by:
+    	;;;; Date:
+    	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      </code></pre><br>
+    	Important comments (e.g., function description) should begin with
+      3 semicolons.<br><pre><code>
+    	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    	;;; Function -main is where execution begins
+    	;;; Input: the radius of a circle.
+    	;;; Output: the area of that circle.
+    	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      </code></pre>
+    	Comments that clarify a section of code within a function should begin with 2 semicolons.
+    	Comments about a single line of code should begin with 1 semicolon.
+      </p>
+  </div>
+  <button type="button" class="collapsible nested">Output</button>
+  <div class="content nested">
+    <p>
+  	print and println functions:<br>
+  	<pre><code>
+      (println "\nTo compute the area of a circle,")
+  	  (print   " enter its radius: ") (flush)
+    </code></pre><br>
+
+  	printf can be used to format output:<br>
+  	<pre><code>
+      (printf "\nThe area is %.15f\n\n" (circleArea radius))</code></pre>
+    </p>
+  </div>
+  <button type="button" class="collapsible nested">User Input</button>
+  <div class="content nested">
+    <p> Read user input and assign to a variable n:<br>
+      <code>(def n (read))</code>
+    </p>
+  </div>
+</div>
+<button type="button" class="collapsible Ruby">Ruby</button>
+<div class="content" style="background-color: #e6ebf5">
+  <p>Source files end in .rb suffix. Because Ruby is an interpreted language, it
+    uses an interpreter to run the program:<br>
+	<code>ruby file_name.rb</code></p>
+  <button type="button" class="collapsible nested">Documentation</button>
+  <div class="content nested">
+    <p>
+  	Opening:<br><pre><code>
+  	#! /usr/bin/ruby
+  	# circle_area.rb computes the area of a circle given its radius
+  	#
+  	# Input: the radius of a circle
+  	# Precondition: the radius is not negative
+  	# Output: the area of the circle.
+  	#
+  	# Begun by: Prof. Adams, for CS 214 at Calvin College.
+  	# Completed by:
+  	# Date:
+  	###############################################################
+    </code></pre><br>
+
+  	Function:<br><pre><code>
+  	# function circleArea returns a circle's area, given its radius
+  	# Parameters: r, a number
+  	# Precondition: r > 0.
+  	# Returns: the area of a circle whose radius is r.</code></pre>
+    </p>
+  </div>
+  <button type="button" class="collapsible nested">Output</button>
+  <div class="content nested">
+    <p><pre><code>
+  	   print " enter its radius: "</code></pre><br><br>
+  	Use puts to add a newline after executing:<br>
+  	<pre><code>
+      puts circleArea(radius)</code></pre>
+    </p>
+  </div>
+  <button type="button" class="collapsible nested">User Input</button>
+  <div class="content nested">
+    <p>basic input:<br>
+      <code> name = gets </code><br><br>
+      Because <code> gets </code> returns a string, it can be used with string methods, for example:<br>
+      <code> gets.chomp -- </code> chomp is a string method that removes trailing \n character<br>
+      <code> gets.to_i -- </code> converts input to integer<br>
+      <code> gets.to_f </code> converts input to float<br>
+      These methods can also be used in conjunction with one another, such as in <code>
+        gets.chomp.to_i</code>.
+
+    </p>
+  </div>
+</div>
+<script src="214ref.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+button:active { border-style: outset;}
+
+.container{
+  max-width: 960px;
+  margin: auto;
+}
+
+.collapsible {
+  color: white;
+  background-color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: white;
+}
+
+.nested {
+  color: black;
+  background-color: white;
+  padding: 9px;
+
+}
+
+
+.Java { background-color: #e6d5d4 }
+
+.Ada { background-color: #dac1d2 }
+
+.Ruby { background-color: #8da5d0 }
+
+.Clojure { background-color: #ada9d0 }
